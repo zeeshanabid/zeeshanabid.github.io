@@ -1,3 +1,49 @@
-baseURL = "http://zeeshanabid.github.io/"
+baseURL      = "https://zeeshanabid.github.io/"
 languageCode = "en-us"
-title = "Zeeshan Abid"
+title        = "Zeeshan Abid | I think..."
+theme        = "introduction"
+contentdir   = "content"
+layoutdir    = "layouts"
+publishdir   = "public"
+
+[permalinks]
+fixed = ":title/"
+blog  = "blog/:slug/"
+
+[params]
+author        = "Zeeshan Abid" # Full name shows on blog post pages
+firstname     = "Zeeshan" # First name shows in introduction on main page
+tagline       = "I'm a backend engineer." # Appears after the introduction
+introheight   = "large" # Input either 'medium' or 'large' or 'fullheight'
+avatar        = "images/profile.png" # Path to image in static folder eg. img/avatar.png
+email         = "zeeshan.abid@gmail.com" # Shows in contact section, or leave blank to omit
+localtime     = true # Show your current local time in contact section
+timezone      = "Europe/Stockholm" # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+dateform      = "Jan 2, 2006"
+dateformfull  = "Mon Jan 2 2006 15:04:05 EST"
+cachebuster   = true # Add the current unix timestamp in query string for cache busting css assets
+description   = "My personal page"
+faviconfile   = "images/fav.ico"
+highlightjs   = true # Syntax highlighting
+lang          = "en"
+footertext    = "" # Text to show in footer (overrides default text)
+
+[[params.social]]
+url = "https://github.com/zeeshanabid"
+icon = "github"
+
+[[params.social]]
+url = "https://www.linkedin.com/in/zeeshanabid"
+icon = "linkedin"
+
+[[params.social]]
+url = "https://www.instagram.com/mzeeshanabid/"
+icon = "instagram"
+
+[[params.social]]
+url = "mailto:zeeshan.abid@gmail.com"
+icon = "envelope-o"
+
+[[params.social]]
+url = "/index.xml"
+icon = "rss"
