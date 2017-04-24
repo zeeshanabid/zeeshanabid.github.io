@@ -6,6 +6,7 @@ contentdir      = "content"
 layoutdir       = "layouts"
 publishdir      = "public"
 googleAnalytics = "UA-98012196-1"
+disqusshortname = "zeeshanabid"
 
 [permalinks]
 fixed = ":title/"
