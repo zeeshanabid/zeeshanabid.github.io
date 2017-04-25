@@ -35,6 +35,10 @@ url = "https://github.com/zeeshanabid"
 icon = "github"
 
 [[params.social]]
+url = "https://bitbucket.org/zeeshanabid/"
+icon = "bitbucket"
+
+[[params.social]]
 url = "https://www.linkedin.com/in/zeeshanabid"
 icon = "linkedin"
 
