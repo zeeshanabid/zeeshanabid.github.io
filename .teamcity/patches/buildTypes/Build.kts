@@ -19,6 +19,7 @@ changeBuildType(RelativeId("Build")) {
     }
     steps {
         update<ScriptBuildStep>(0) {
+            name = "Update git submodules"
             scriptContent = "git submodule update --init"
         }
     }
