@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2018_1.*
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.ScriptBuildStep
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2018_1.ui.*
 
@@ -21,6 +22,18 @@ changeBuildType(RelativeId("Build")) {
         update<ScriptBuildStep>(0) {
             name = "Update git submodules"
             scriptContent = "git submodule update --init"
+        }
+        insert(1) {
+            dockerCommand {
+                commandType = build {
+                    source = path {
+                        path = "./Dockerfile"
+                    }
+                    contextDir = "."
+                    namesAndTags = "blog:latest"
+                    commandArgs = "--pull"
+                }
+            }
         }
     }
 }
