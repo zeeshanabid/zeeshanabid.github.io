@@ -26,15 +26,6 @@ changeBuildType(RelativeId("Build")) {
         }
         insert(1) {
             dockerCommand {
-                name = "login"
-                commandType = other {
-                    subCommand = "login"
-                    commandArgs = "dkr.zteche.com"
-                }
-            }
-        }
-        insert(2) {
-            dockerCommand {
                 commandType = build {
                     source = path {
                         path = "./Dockerfile"
@@ -45,7 +36,7 @@ changeBuildType(RelativeId("Build")) {
                 }
             }
         }
-        insert(3) {
+        insert(2) {
             dockerCommand {
                 name = "Docker push"
                 commandType = push {
