@@ -30,7 +30,7 @@ changeBuildType(RelativeId("Build")) {
                         path = "./Dockerfile"
                     }
                     contextDir = "."
-                    namesAndTags = "blog:latest"
+                    namesAndTags = "dkr.zteche.com/blog:latest"
                     commandArgs = "--pull"
                 }
             }
