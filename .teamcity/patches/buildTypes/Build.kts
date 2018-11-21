@@ -35,5 +35,13 @@ changeBuildType(RelativeId("Build")) {
                 }
             }
         }
+        insert(2) {
+            dockerCommand {
+                name = "Docker push"
+                commandType = push {
+                    namesAndTags = "dkr.zteche.com/blog:latest"
+                }
+            }
+        }
     }
 }
