@@ -43,5 +43,14 @@ changeBuildType(RelativeId("Build")) {
                 }
             }
         }
+        insert(3) {
+            dockerCommand {
+                name = "login"
+                commandType = other {
+                    subCommand = "login"
+                    commandArgs = "dkr.zteche.com"
+                }
+            }
+        }
     }
 }
