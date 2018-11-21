@@ -21,12 +21,5 @@ changeProject(DslContext.projectId) {
                 password = "credentialsJSON:a3b246d9-7df6-40a9-bba7-0c01922c996a"
             }
         }
-        add {
-            dockerRegistry {
-                id = "PROJECT_EXT_3"
-                name = "DKR-ZTECHE"
-                url = "https://docker.io"
-            }
-        }
     }
 }
