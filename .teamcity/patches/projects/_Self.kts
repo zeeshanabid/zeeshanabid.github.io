@@ -15,7 +15,7 @@ changeProject(DslContext.projectId) {
         add {
             dockerRegistry {
                 id = "PROJECT_EXT_2"
-                name = "Docker Registry"
+                name = "ZTECHE DKR"
                 url = "https://dkr.zteche.com"
                 userName = "admin"
                 password = "credentialsJSON:a3b246d9-7df6-40a9-bba7-0c01922c996a"
