@@ -39,7 +39,7 @@ changeBuildType(RelativeId("Build")) {
             dockerCommand {
                 name = "Docker push"
                 commandType = push {
-                    namesAndTags = "https://dkr.zteche.com/blog:latest"
+                    namesAndTags = "dkr.zteche.com/blog:latest"
                 }
             }
         }
