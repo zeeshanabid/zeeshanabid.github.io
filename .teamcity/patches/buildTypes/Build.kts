@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2018_1.*
+import jetbrains.buildServer.configs.kotlin.v2018_1.buildFeatures.dockerSupport
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.script
@@ -49,6 +50,17 @@ changeBuildType(RelativeId("Build")) {
                 name = "Docker push"
                 commandType = push {
                     namesAndTags = "dkr.zteche.com/blog:latest"
+                }
+            }
+        }
+    }
+
+    features {
+        add {
+            dockerSupport {
+                cleanupPushedImages = true
+                loginToRegistry = on {
+                    dockerRegistryId = "PROJECT_EXT_2"
                 }
             }
         }
