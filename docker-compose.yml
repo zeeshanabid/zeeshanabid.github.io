@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  blog:
+    image: dkr.zteche.com/blog:latest
+    networks:
+      - traefik_net
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: any
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      labels:
+        traefik.docker.network: zteche_traefik_net
+        traefik.enable: "true"
+        traefik.frontend.rule: "Host:blog.zteche.com"
+        traefik.frontend.auth.basic.usersFile: /htpasswd
+        traefik.port: 80
+        traefik.protocol: http
+
+networks:
+  traefik_net:
+    driver: overlay
