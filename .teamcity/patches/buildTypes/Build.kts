@@ -44,6 +44,15 @@ changeBuildType(RelativeId("Build")) {
                 }
             }
         }
+        insert(3) {
+            dockerCommand {
+                name = "Deploy stack"
+                commandType = other {
+                    subCommand = "stack"
+                    commandArgs = "deploy --with-registry-auth --compose-file docker-compose.yml zteche"
+                }
+            }
+        }
     }
 
     features {
